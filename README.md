@@ -4,7 +4,7 @@
 
 A fast, minimalist and responsive hugo theme.
 
-![./images/screenshot.png](https://raw.githubusercontent.com/tophatcrpat/izi-hugo-theme/master/images/screenshot.png)
+![./images/screenshot.png](https://raw.githubusercontent.com/tophatcroat/izi-hugo-theme/master/images/screenshot.png)
 
 - [Example site](https://martinovic.blog)
 
