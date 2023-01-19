@@ -189,3 +189,19 @@ And also inside your `customCSS` file, for example `static/css/style.css`, add:
     --text-font: 'Open Sans', serif;
 }
 ```
+
+### 3.4 Colours
+
+If you wish to change the overall colours of the blogs, simply overwrite the CSS variables in your `customerCSS` file
+as such:
+```css
+:root {
+    --accent-color: #ffc300;
+    --accent-color-light: #ffd60a;
+    --text-primary: #f8f9fa;
+    --text-secondary: #dee2e6;
+    --background: #001d3d;
+    --background-secondary: #003566;
+    --border: #6c757d;
+}
+```

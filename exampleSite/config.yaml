@@ -30,16 +30,17 @@ markup:
     renderer:
       unsafe: true
 
-# Social links in footer, support github,twitter,stackoverflow,facebook
+# Social links in footer
+# Simply delete the ones you don't have
+# Source: https://github.com/simple-icons/simple-icons
 social:
-  # e.g.
   github: your-github-link
   twitter: your-twitter-link
   stackoverflow: your-stackoverflow-link
-  # email: your-email
-  # facebook: your-facebook-link
-  # mastodon: your-mastodon-link
-  # linkedin: your-linkedin-link
+  email: your-email
+  facebook: your-facebook-link
+  mastodon: your-mastodon-link
+  linkedin: your-linkedin-link
 
 
 # Site parameters
@@ -72,6 +73,7 @@ params:
     ## e.g.
     # - css/custom.css # local css in `static/css/custom.css`
     # - https://example.com/custom.css # remote css
+    - css/custom.css
   customJS:
     ## e.g.
     # - js/custom.js # local js in `static/js/custom.js`
