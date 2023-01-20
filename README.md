@@ -222,3 +222,21 @@ as such:
     --border: #6c757d;
 }
 ```
+
+### 3.7 Spacing
+
+Changing the spacing is just as easy, simply overwrite the CSS variables in your `customerCSS` file
+as such:
+
+```css
+:root {
+    --line-height-scalar: 2;
+
+    --space-base: 1.5rem;
+
+    --space-page-width: calc(var(--space-base) * 64);
+    --space-page-vertical: calc(var(--space-base) * 2);
+
+    --space-content-vertical: calc(var(--space-base) * 3);
+}
+```

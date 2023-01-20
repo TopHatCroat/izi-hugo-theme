@@ -6,4 +6,13 @@
     --background: #001d3d;
     --background-secondary: #003566;
     --border: #6c757d;
+
+    --line-height-scalar: 2;
+
+    --space-base: 1.5rem;
+
+    --space-page-width: calc(var(--space-base) * 64);
+    --space-page-vertical: calc(var(--space-base) * 2);
+
+    --space-content-vertical: calc(var(--space-base) * 3);
 }
