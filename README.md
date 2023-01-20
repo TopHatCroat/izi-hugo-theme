@@ -184,13 +184,27 @@ as such:
 
 ```css
 :root {
-    --accent-color: #ffc300;
+    --accent-color: #8e24aa;
+    --accent-color-light: #ab47bc;
+    --text-primary: #0a0908;
+    --text-secondary: #22333b;
+    --background: #ffffff;
+    --background-secondary: #f6fff8;
+    --border: #6c757d;
+}
+```
+
+If you want to add dark colour scheme support, for those who have it selected as preferred in their browser:
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
     --accent-color-light: #ffd60a;
     --text-primary: #f8f9fa;
     --text-secondary: #dee2e6;
     --background: #001d3d;
     --background-secondary: #003566;
     --border: #6c757d;
+  }
 }
 ```
 

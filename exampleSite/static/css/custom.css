@@ -1,10 +1,10 @@
 :root {
-    --accent-color: #ffc300;
-    --accent-color-light: #ffd60a;
-    --text-primary: #f8f9fa;
-    --text-secondary: #dee2e6;
-    --background: #001d3d;
-    --background-secondary: #003566;
+    --accent-color: #8f2d56;
+    --accent-color-light: #d81159;
+    --text-primary: #0a0908;
+    --text-secondary: #22333b;
+    --background: #ffffff;
+    --background-secondary: #f6fff8;
     --border: #6c757d;
 
     --line-height-scalar: 2;
