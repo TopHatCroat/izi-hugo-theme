@@ -16,11 +16,22 @@ Features:
 - Archive
 - Tags
 
-
 ## 1. Installation
 
+### 1.1 As Git Submodule (Easy)
 
-### 1.1 As a Hugo Module (recommended)
+1. Inside the folder of your Hugo site run:
+    ```bash
+    git submodule add https://github.com/tophatcroat/izi-hugo-theme.git themes/izi
+    ```
+
+2. Add the theme's directory to your `config.yaml`:
+
+    ```yaml
+   theme: izi
+    ```
+
+### 1.2 As a Hugo Module
 
 > ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform),
 > you may not have Go installed on your machine. To check if Go is installed:
@@ -42,20 +53,6 @@ Features:
        - github.com/tophatcroat/izi-hugo-theme
     ```
 
-### 1.2 As Git Submodule
-
-1. Inside the folder of your Hugo site run:
-
-    ```bash
-    $ git submodule add https://github.com/tophatcroat/izi-hugo-theme.git themes/izi
-    ```
-
-2. Add the theme's directory to your `config.yaml`:
-
-    ```yaml
-   theme: izi
-    ```
-
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
 
@@ -72,7 +69,7 @@ this theme. You'll find a file called
 To use it, copy the [`config.yaml`](https://github.com/tophatcroat/izi-hugo-theme/blob/master/exampleSite/config.yaml)
 in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
-> ⚠️ You may need to delete the line: `themesDir: ../../`
+> ⚠️ You should delete the line: `themesDir: ../../`
 
 ### 2.2 Default Content Language
 
@@ -82,40 +79,15 @@ You can set default content language by `defaultContentLanguage`:
 defaultContentLanguage: en-us
 ```
 
-Default is `en-gb`. Now support:
+Default is `en-gb`. Supported languages are:
 
-- `en-us`: American English
 - `en-gb`: English
+- `en-us`: American English
 
-More about multiple languages: [Multilingual Mode](https://gohugo.io/content-management/multilingual/).
+- More about multiple languages: [Multilingual Mode](https://gohugo.io/content-management/multilingual/).
 
-### 2.3 Google Analytics
 
-To enable google analytics, add following to your config file:
-
-- Google Analytics ID: `googleAnalytics: your-google-analytics-id`
-- Enable Google Analytics:
-
-    ```yaml
-    params:
-      enableGoogleAnalytics: true
-    ```
-
-### 2.4 Logo and favicon
-
-You can replace the log in the top of each page and favicon with your own images. To do that put your own logo and
-favicon into the `images` directory of your website static directory, then named them `avatar.png` and `favicon.ico`.
-For example:
-
-```
-- content
-- static
-└── images
-    ├── avatar.png
-    └── favicon.svg
-```
-
-### 2.5 Nearly finished
+### 2.3 Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
 
@@ -127,7 +99,7 @@ Now enter http://localhost:1313 in the address bar of your browser.
 
 ### 2.6 Production
 
-To run in production (e.g. to have Google Analytics show up), run HUGO_ENV=production before your build command.
+To run in production, run HUGO_ENV=production before your build command.
 For example:
 
 ```bash
@@ -140,7 +112,6 @@ Note: The above command will not work on Windows. If you are running a Windows O
 set HUGO_ENV=production
 hugo
 ```
-
 
 ## 3. Optional Configuration
 

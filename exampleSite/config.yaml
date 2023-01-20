@@ -1,30 +1,21 @@
 baseURL: https://example.com
-languageCode: en-us
 title: Hugo
 theme: izi-hugo-theme
 
-# Default content language, support en (English) / zh (Chinese) / nl (Dutch) / fr (French) / es (Spanish), default 'en'
-defaultContentLanguage: en-us
+# Default content language, support: en-gb (English), en-us (American English)
+defaultContentLanguage: en-gb
 
 # !!! exampleSite ONLY, DELETE THIS LINE FOR YOUR OWN USE: `themesDir: ../../`
 themesDir: ../../
 
-hasCJKLanguage: true
-
 paginate: 3
-
-googleAnalytics: your-google-analytics-id
 
 # Hugo Configure Markup
 # More info: https://gohugo.io/getting-started/configuration-markup#
 markup:
   highlight:
     guessSyntax: true
-    style: emacs
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 2
+    style: monokai
   # needed to render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
   goldmark:
     renderer:
@@ -64,8 +55,6 @@ params:
 
   # To enable RSS, you could set `enableRSS: true`, default is `true`
   enableRSS: true
-  # To enable Google Analytics, you may need to set `googleAnalytics`
-  enableGoogleAnalytics: true
   # To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
   hiddenPostSummaryInHomePage: false
   # Website copy write, default: '© Copyright {currentYear} ❤️ {params.author}'
