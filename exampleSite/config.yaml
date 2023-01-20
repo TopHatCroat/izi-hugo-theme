@@ -6,7 +6,7 @@ theme: izi-hugo-theme
 # Default content language, support en (English) / zh (Chinese) / nl (Dutch) / fr (French) / es (Spanish), default 'en'
 defaultContentLanguage: en-us
 
-# !!! exampleSite only, you may need to delete the line: `themesDir: ../../`
+# !!! exampleSite ONLY, DELETE THIS LINE FOR YOUR OWN USE: `themesDir: ../../`
 themesDir: ../../
 
 hasCJKLanguage: true
@@ -52,6 +52,8 @@ params:
   # Site Description, used in HTML meat
   description: My Blog
 
+  favicon: 'image/favicon.svg'
+
   titleFont: 'https://fonts.googleapis.com/css?family=Unna'
   textFont: 'https://fonts.googleapis.com/css?family=Open+Sans'
 
@@ -74,6 +76,7 @@ params:
     # - css/custom.css # local css in `static/css/custom.css`
     # - https://example.com/custom.css # remote css
     - css/custom.css
+
   customJS:
     ## e.g.
     # - js/custom.js # local js in `static/js/custom.js`

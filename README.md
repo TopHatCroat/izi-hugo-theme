@@ -144,7 +144,15 @@ hugo
 
 ## 3. Optional Configuration
 
-### 3.1 Custom CSS and JS
+### 3.1 Add a favicon
+
+To add a favicon, just paste it into the `static/` directory and configure it's path in `config.yaml:
+```yaml
+params:
+  favicon: 'image/favicon.svg'
+```
+
+### 3.2 Custom CSS and JS
 
 You can put your custom css and js files to `static` directory, or use remote css and js files which start with
 `http://` or `https://`.
@@ -160,7 +168,7 @@ customJS:
   - https://example.com/custom.js # remote js
 ```
 
-### 3.2 Post Summary in Home Page
+### 3.3 Post Summary in Home Page
 
 Set `hiddenPostSummaryInHomePage` to `true` to show the first paragraph on the index page, default is `false`.
 
@@ -173,7 +181,7 @@ hiddenPostSummaryInHomePage: true
 Alternatively, you can add a `description` in the Front Matter to provide bespoke summary.
 
 
-### 3.3 Fonts
+### 3.4 Fonts
 
 You can replace default fonts for article titles and content
 
@@ -190,10 +198,11 @@ And also inside your `customCSS` file, for example `static/css/style.css`, add:
 }
 ```
 
-### 3.4 Colours
+### 3.5 Colours
 
 If you wish to change the overall colours of the blogs, simply overwrite the CSS variables in your `customerCSS` file
 as such:
+
 ```css
 :root {
     --accent-color: #ffc300;

@@ -31,7 +31,9 @@
   {{ end }}
 {{ end }}
 
-<link rel="shortcut icon" type="text/xml" href="{{ "/images/favicon.svg" | relURL }}" />
+{{ if .Site.Params.favicon }}
+  <link rel="icon" href="{{ .Site.Params.favicon | relURL }}" />
+{{ end }}
 
 {{ if .Site.Params.enableGoogleAnalytics }}
     {{ template "_internal/google_analytics_async.html" . }}
