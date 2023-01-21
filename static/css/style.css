@@ -312,8 +312,6 @@ nav.navigation a svg {
 }
 
 #article-list .title {
-  display: inline-block;
-  color: var(--border);
   font-size: var(--text-size-xl);
   line-height: calc(var(--text-size-xl) * var(--line-height-scalar));
   font-weight: 400;
@@ -374,7 +372,7 @@ nav.navigation a svg {
 }
 
 #article .meta {
-  color: var(--border);
+  color: var(--text-secondary);
   font-size: var(--text-size-n);
   line-height: calc(var(--text-size-n) * var(--line-height-scalar));
 }
