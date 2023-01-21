@@ -272,3 +272,11 @@ as such:
     --space-content-vertical: calc(var(--space-base) * 3);
 }
 ```
+
+### 3.8 Analytics
+
+To add Google Analytics provide your tracking ID in your configuration file:
+
+```yaml
+googleAnalytics: UA-PROPERTY_ID
+```
