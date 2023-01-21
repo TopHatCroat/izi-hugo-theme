@@ -211,8 +211,9 @@ If you want to add dark colour scheme support, for those who have it selected as
 #### 3.6.1 Syntax highlighting
 
 If you want to change the colours of the syntax highlighter you can find the supported themes 
-[here](https://xyproto.github.io/splash/docs/) and generate the CSS with `hugo gen chromastyles --style=github` and
-paste the output into your `customCSS` file
+[here](https://xyproto.github.io/splash/docs/all.html) and generate the CSS with `hugo gen chromastyles --style=github` and
+paste the output into your `customCSS` file.
+
 ```css
 /* Background */ .bg { background-color: #ffffff; }
 /* PreWrapper */ .chroma { background-color: #ffffff; }
@@ -226,8 +227,21 @@ paste the output into your `customCSS` file
 ```
 
 If you are using a different light and dark themes then it's recommended to use a different theme that will look good
-with dark colours:
+with dark colours, it's also a good idea to wrap your light syntax with with `@media (prefers-color-scheme: light)`
+because some colours can overwrite one another
 ```css
+@media (prefers-color-scheme: light) {
+    /* Background */ .bg { background-color: #ffffff; }
+    /* PreWrapper */ .chroma { background-color: #ffffff; }
+    /* Other */ .chroma .x {  }
+    /* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
+
+    /*
+        ...
+        omitted for brevity
+    */
+}
+
 @media (prefers-color-scheme: dark) {
     /* Background */ .bg { color: #f8f8f2; background-color: #282a36; }
     /* PreWrapper */ .chroma { color: #f8f8f2; background-color: #282a36; }
