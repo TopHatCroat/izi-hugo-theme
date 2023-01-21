@@ -14,8 +14,10 @@ paginate: 3
 # More info: https://gohugo.io/getting-started/configuration-markup#
 markup:
   highlight:
+    # but you can also be speciffic by specifying the language when opening the blog, for example: ```java
     guessSyntax: true
-    style: monokai
+    # makes it use CSS clases so colours can be adapted with CSS, for example for dark themes
+    noClasses: false
   # needed to render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
   goldmark:
     renderer:

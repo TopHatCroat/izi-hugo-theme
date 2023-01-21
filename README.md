@@ -2,7 +2,7 @@
 
 > 'izi' name come from Croatian spelling of the English work 'eazy'
 
-A fast, minimalist and responsive hugo theme.
+A fast (no JS), minimalist (text based), responsive and highly customisable hugo theme.
 
 ![./images/screenshot.png](https://raw.githubusercontent.com/tophatcroat/izi-hugo-theme/master/images/screenshot.png)
 
@@ -179,7 +179,7 @@ And also inside your `customCSS` file, for example `static/css/style.css`, add:
 
 ### 3.6 Colours
 
-If you wish to change the overall colours of the blogs, simply overwrite the CSS variables in your `customerCSS` file
+If you wish to change the overall colours of the blogs, simply overwrite the CSS variables in your `customCSS` file
 as such:
 
 ```css
@@ -208,9 +208,42 @@ If you want to add dark colour scheme support, for those who have it selected as
 }
 ```
 
+#### 3.6.1 Syntax highlighting
+
+If you want to change the colours of the syntax highlighter you can find the supported themes 
+[here](https://xyproto.github.io/splash/docs/) and generate the CSS with `hugo gen chromastyles --style=github` and
+paste the output into your `customCSS` file
+```css
+/* Background */ .bg { background-color: #ffffff; }
+/* PreWrapper */ .chroma { background-color: #ffffff; }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
+
+/*
+    ...
+    omitted for brevity
+*/
+```
+
+If you are using a different light and dark themes then it's recommended to use a different theme that will look good
+with dark colours:
+```css
+@media (prefers-color-scheme: dark) {
+    /* Background */ .bg { color: #f8f8f2; background-color: #282a36; }
+    /* PreWrapper */ .chroma { color: #f8f8f2; background-color: #282a36; }
+    /* Other */ .chroma .x {  }
+    /* Error */ .chroma .err {  }
+
+    /*
+        ...
+        omitted for brevity
+    */
+}
+```
+
 ### 3.7 Spacing
 
-Changing the spacing is just as easy, simply overwrite the CSS variables in your `customerCSS` file
+Changing the spacing is just as easy, simply overwrite the CSS variables in your `customCSS` file
 as such:
 
 ```css
