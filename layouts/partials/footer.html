@@ -1,29 +1,32 @@
 <footer id="footer">
-    {{ if .Site.Social }}
-        {{ partial "social.html" . }}
-    {{ end }}
+  {{ if .Site.Social }}
+  {{ partial "social.html" . }}
+  {{ end }}
 
-    <div class="copyright">
+  <div class="copyright">
     {{ with .Site.Params.copyright }}
-        {{ . | markdownify }}
+    {{ . | markdownify }}
     {{ else }}
-       © Copyright
-       {{ now.Format "2006"}}
-       <span class="split">
+    <span>
+       © Copyright {{ now.Format "2006"}}
+    </span>
+    <span class="split">
         {{ partial "svgs/heart.svg" (dict "fill" "#bbbbbb" "width" 15 "height" 15 ) }}
-       </span>
-       {{ .Site.Params.Author }}
+     </span>
+    <span>
+      {{ .Site.Params.Author }}
+    </span>
     {{ end }}
-    </div>
+  </div>
 
 </footer>
 
 {{ range .Site.Params.customJS }}
-    {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
-        <!-- remote js -->
-        <script src="{{ . }}"></script>
-    {{ else }}
-        <!-- local js -->
-        <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
-    {{ end }}
+{{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
+<!-- remote js -->
+<script src="{{ . }}"></script>
+{{ else }}
+<!-- local js -->
+<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+{{ end }}
 {{ end }}
