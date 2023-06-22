@@ -336,7 +336,7 @@ nav.navigation a svg {
   color: var(--text-secondary);
   word-break: normal;
   overflow-wrap: anywhere;
-  margin: calc(var(--space-page-vertical) * 0.1) 0 calc(var(--space-page-vertical) * 0.8) 0;
+  padding: calc(var(--space-page-vertical) * 0.1) 0 calc(var(--space-page-vertical) * 0.8) 0;
 }
 
 #article-list hr {
