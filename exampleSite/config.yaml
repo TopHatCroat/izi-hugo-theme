@@ -4,6 +4,8 @@ theme: izi-hugo-theme
 
 # Default content language, support: en-gb (English), en-us (American English)
 defaultContentLanguage: en-gb
+language:
+  languageCode: en-GB
 
 # !!! exampleSite ONLY, DELETE THIS LINE FOR YOUR OWN USE: `themesDir: ../../`
 themesDir: ../../
@@ -43,6 +45,9 @@ author:
   name: Your Name
   email: firstname.lastname@example.com
 
+# Website copy write, default: 'Copyright {currentYear} by {author.name}'
+copyright: 'Copyright'
+
 # Site parameters
 params:
   # Author biography, shown at the top of the pages
@@ -64,8 +69,6 @@ params:
   enableRSS: true
   # To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
   hiddenPostSummaryInHomePage: false
-  # Website copy write, default: '© Copyright {currentYear} ❤️ {author.name}'
-  copyright: ''
 
   # You can put your custom css and js to `static` directory, or use remote css and js files which start with `http://` or `https://`
   customCSS:

@@ -4,11 +4,8 @@
   {{ end }}
 
   <div class="copyright">
-    {{ with .Site.Params.copyright }}
-    {{ . | markdownify }}
-    {{ else }}
     <span>
-       © Copyright {{ now.Format "2006"}}
+       {{ .Site.Copyright }} {{ now.Format "2006"}}
     </span>
     <span class="split">
         {{ partial "svgs/heart.svg" (dict "fill" "#bbbbbb" "width" 15 "height" 15 ) }}
@@ -16,7 +13,6 @@
     <span>
       {{ .Site.Author.name }}
     </span>
-    {{ end }}
   </div>
 
 </footer>
