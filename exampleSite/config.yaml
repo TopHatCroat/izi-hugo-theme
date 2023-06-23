@@ -1,5 +1,5 @@
 baseURL: https://example.com
-title: Hugo
+title: Hugo blog
 theme: izi-hugo-theme
 
 # Default content language, support: en-gb (English), en-us (American English)
@@ -27,7 +27,7 @@ markup:
     renderer:
       unsafe: true
 
-# Social links in footer
+# Social links in footer, if you don't have it just delete it or comment it out
 # Simply delete the ones you don't have
 # Source: https://github.com/simple-icons/simple-icons
 social:
@@ -39,11 +39,12 @@ social:
   mastodon: your-mastodon-link
   linkedin: your-linkedin-link
 
+author:
+  name: Your Name
+  email: firstname.lastname@example.com
 
 # Site parameters
 params:
-  # Site Author name, showed at the top of the pages
-  author: Author Name
   # Author biography, shown at the top of the pages
   bio: Your bio
   # Site Description, used in HTML meat
@@ -63,7 +64,7 @@ params:
   enableRSS: true
   # To hidden post summary in home page, you could set `hiddenPostSummaryInHomePage: true`, default is `false`
   hiddenPostSummaryInHomePage: false
-  # Website copy write, default: '© Copyright {currentYear} ❤️ {params.author}'
+  # Website copy write, default: '© Copyright {currentYear} ❤️ {author.name}'
   copyright: ''
 
   # You can put your custom css and js to `static` directory, or use remote css and js files which start with `http://` or `https://`

@@ -6,7 +6,7 @@
   {{ end }}
 
   <div id="description">
-    <h1 class="title">{{ .Site.Params.Author }}</h1>
+    <h1 class="title">{{ .Site.Author.name }}</h1>
 
     {{ with .Site.Params.Bio }}
       <h2>{{ . | markdownify }}</h2>
