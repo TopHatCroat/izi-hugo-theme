@@ -55,6 +55,11 @@ params:
   # Site Description, used in HTML meat
   description: My Blog
 
+  # URL for the source code of the blog, it must point to the main/master branch such that when it's appended with
+  # /content/<path-of-article> it should end up at he article source
+  # ex. 'https://github.com/TopHatCroat/blog/tree/master'
+  # editUrl: https://github.com/<your username>/<your repository>/tree/master
+
   favicon: 'image/favicon.svg'
   avatar: 'image/avatar.png'
 

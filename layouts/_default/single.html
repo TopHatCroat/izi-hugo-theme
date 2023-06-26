@@ -18,6 +18,14 @@
         <span>
           {{ i18n "minuteRead" . }}
         </span>
+        {{ if $.Site.Params.editUrl }}
+        <span class="separator">
+          ·
+        </span>
+        <a class="edit-url" href="{{ $.Site.Params.editUrl | absURL }}/content/{{ .File.Path }}" target="_blank" rel="noopener">
+          Edit this article
+        </a>
+        {{ end }}
     </div>
 
     <div class="content">

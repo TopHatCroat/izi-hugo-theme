@@ -280,3 +280,12 @@ To add Google Analytics provide your tracking ID in your configuration file:
 ```yaml
 googleAnalytics: UA-PROPERTY_ID
 ```
+
+### 3.9 Edit article link
+
+You can add a link to edit article in your repository by adding `editUrl` in your configuration file:
+
+```yaml
+params:
+  editUrl: 'https://github.com/<your username>/<your repository>/tree/master'
+```
