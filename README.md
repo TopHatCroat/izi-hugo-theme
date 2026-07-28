@@ -33,12 +33,7 @@ Features:
 
 ### 1.2 As a Hugo Module
 
-> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform),
-> you may not have Go installed on your machine. To check if Go is installed:
-> ```
-> $ go version
-> ```
->  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
+> Hugo Modules require Go to be installed.
 
 1. From your project's root directory, initiate the hugo module system if you haven't already:
 
@@ -49,11 +44,28 @@ Features:
 2. Add the theme's repo to your `config.yaml`:
 
     ```yaml
-    theme:
-       - github.com/tophatcroat/izi-hugo-theme
+    module:
+      imports:
+        - path: github.com/tophatcroat/izi-hugo-theme
     ```
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
+
+### 1.3 Install Go With mise
+
+If you use [`mise`](https://mise.jdx.dev/), install the latest Go runtime globally with:
+
+```bash
+mise use -g go@latest
+```
+
+To pin Go for just this project instead, run this from the site root:
+
+```bash
+mise use go@latest
+```
+
+That creates or updates `mise.toml` so the project uses that Go version automatically.
 
 
 ## 2. Getting started

@@ -20,9 +20,7 @@
   {{ else }}
       <h2 class="read-more">{{ i18n "readMore" }}</h2>
   {{ end }}
-    {{ $pages := .Site.RegularPages }}
-    {{ $paginator := .Paginate ($pages) }}
-    {{ range $paginator.Pages }}
+    {{ range first 10 .Site.RegularPages }}
         {{ $title := .Title }}
         {{ $date := dateFormat "Jan 2, 2006" .Date }}
         <section class="item">

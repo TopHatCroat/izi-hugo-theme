@@ -1,17 +1,20 @@
+{{ $author := .Site.Params.author }}
+{{ $copyright := .Site.Params.copyright }}
+{{ $social := .Site.Params.social }}
 <footer id="footer">
-  {{ if .Site.Social }}
+  {{ if $social }}
   {{ partial "social.html" . }}
   {{ end }}
 
   <div class="copyright">
     <span>
-       {{ .Site.Copyright }} {{ now.Format "2006"}}
+       {{ $copyright }} {{ now.Format "2006"}}
     </span>
     <span class="split">
         {{ partial "svgs/heart.svg" (dict "fill" "#bbbbbb" "width" 15 "height" 15 ) }}
      </span>
     <span>
-      {{ .Site.Author.name }}
+      {{ $author.name }}
     </span>
   </div>
 
@@ -23,6 +26,6 @@
 <script src="{{ . }}"></script>
 {{ else }}
 <!-- local js -->
-<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+<script src="{{ . | relURL }}"></script>
 {{ end }}
 {{ end }}

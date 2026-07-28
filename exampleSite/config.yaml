@@ -4,17 +4,18 @@ theme: izi-hugo-theme
 
 # Default content language, support: en-gb (English), en-us (American English)
 defaultContentLanguage: en-gb
-language:
-  languageCode: en-GB
+locale: en-GB
 
 # !!! exampleSite ONLY, DELETE THIS LINE FOR YOUR OWN USE: `themesDir: ../../`
 themesDir: ../../
 
 # Number of posts on the index page
-paginate: 10
+pagination:
+  pagerSize: 10
 
-# Remove if you don't want Google Analytics
-googleAnalytics: G-MEASUREMENT_ID
+services:
+  googleAnalytics:
+    id: G-MEASUREMENT_ID
 
 # Hugo Configure Markup
 # More info: https://gohugo.io/getting-started/configuration-markup#
@@ -29,31 +30,31 @@ markup:
     renderer:
       unsafe: true
 
-# Social links in footer, if you don't have it just delete it or comment it out
-# Simply delete the ones you don't have
-# Source: https://github.com/simple-icons/simple-icons
-social:
-  github: your-github-link
-  twitter: your-twitter-link
-  stackoverflow: your-stackoverflow-link
-  email: your-email
-  facebook: your-facebook-link
-  mastodon: your-mastodon-link
-  linkedin: your-linkedin-link
-
-author:
-  name: Your Name
-  email: firstname.lastname@example.com
-
-# Website copy write, default: 'Copyright {currentYear} by {author.name}'
-copyright: 'Copyright'
-
 # Site parameters
 params:
+  author:
+    name: Your Name
+    email: firstname.lastname@example.com
+
+  # Website copyright, default: 'Copyright {currentYear} by {author.name}'
+  copyright: 'Copyright'
+
   # Author biography, shown at the top of the pages
   bio: Your bio
   # Site Description, used in HTML meat
   description: My Blog
+
+  # Social links in footer, if you don't have it just delete it or comment it out
+  # Simply delete the ones you don't have
+  # Source: https://github.com/simple-icons/simple-icons
+  social:
+    github: your-github-link
+    twitter: your-twitter-link
+    stackoverflow: your-stackoverflow-link
+    email: your-email
+    facebook: your-facebook-link
+    mastodon: your-mastodon-link
+    linkedin: your-linkedin-link
 
   # URL for the source code of the blog, it must point to the main/master branch such that when it's appended with
   # /content/<path-of-article> it should end up at he article source

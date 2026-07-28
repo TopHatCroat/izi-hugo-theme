@@ -15,10 +15,12 @@
   </a>
 
 	{{ if .Site.Params.enableRSS }}
+  {{ with .Site.Home.OutputFormats.Get "rss" }}
   <a id="rss"
-    href="{{ .Site.RSSLink }}">
+    href="{{ .RelPermalink }}">
     {{ partial "svgs/rss.svg" }}
-    {{ with .Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}
+    {{ with $.Site.Params.subscribe }}{{ . }}{{ else }}{{ i18n "subscribe" }}{{ end }}
   </a>
+  {{ end }}
   {{ end }}
 </nav>
