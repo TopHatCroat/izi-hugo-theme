@@ -393,7 +393,7 @@ nav.navigation .theme-toggle svg {
   margin-bottom: calc(var(--space-content-vertical) * 0.3);
   font-size: clamp(var(--text-size-xl), 8vw, var(--text-size-xxl));
   line-height: clamp(var(--text-size-xl), 8vw, var(--text-size-xxl));
-  margin: var(--space-page-vertical) 0 var(--space-page-vertical) 0;
+  margin: var(--space-s) 0 var(--space-s) 0;
   color: var(--text-primary);
   white-space: nowrap;
 }
