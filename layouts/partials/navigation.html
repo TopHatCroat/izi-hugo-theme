@@ -23,4 +23,13 @@
   </a>
   {{ end }}
   {{ end }}
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+    <span class="theme-toggle-icon theme-toggle-icon-moon">
+      {{ partial "svgs/moon.svg" (dict "fill" "currentColor" "width" 20 "height" 20 ) }}
+    </span>
+    <span class="theme-toggle-icon theme-toggle-icon-sun">
+      {{ partial "svgs/sun.svg" (dict "fill" "currentColor" "width" 20 "height" 20 ) }}
+    </span>
+  </button>
 </nav>

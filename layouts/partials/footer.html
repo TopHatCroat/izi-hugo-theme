@@ -22,6 +22,7 @@
 
 <template id="code-copy-icon-template">{{ partial "svgs/copy.svg" (dict "fill" "currentColor" "width" 16 "height" 16 ) }}</template>
 <script src="{{ "js/code-copy.js" | relURL }}"></script>
+<script src="{{ "js/theme-toggle.js" | relURL }}"></script>
 
 {{ range .Site.Params.customJS }}
 {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}

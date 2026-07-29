@@ -2,6 +2,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 {{ $gaID := or .Site.Config.Services.GoogleAnalytics.ID .Site.GoogleAnalytics }}
+<script>
+  (function () {
+    var root = document.documentElement;
+    var storedTheme = null;
+    try {
+      storedTheme = localStorage.getItem('theme');
+    } catch (e) {}
+
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+      root.dataset.theme = storedTheme;
+    }
+
+    var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var effectiveTheme = root.dataset.theme || (systemDark ? 'dark' : 'light');
+    root.dataset.themeEffective = effectiveTheme;
+  })();
+</script>
 <meta name="description"
       content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 {{ hugo.Generator }}

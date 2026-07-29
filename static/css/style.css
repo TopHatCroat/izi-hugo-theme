@@ -20,7 +20,7 @@
 
   --line-height-scalar: 1.4;
   --heading-line-height-scalar: 1.2;
-  --font-weight-title: 400;
+  --font-weight-title: 600;
   --font-weight-description: 300;
   --font-weight-content: 400;
 
@@ -42,8 +42,50 @@
   --space-xxxl: calc(var(--space-base) * 6);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ffd60a;
+    --accent-color-light: #ffe066;
+    --text-primary: #f8f9fa;
+    --text-secondary: #dee2e6;
+    --background: #001d3d;
+    --background-secondary: #003566;
+    --border: #6c757d;
+  }
+}
+
+html[data-theme="light"] {
+  --accent-color: #aa2434;
+  --accent-color-light: #ff5959;
+  --text-primary: #252525;
+  --text-secondary: #888888;
+  --background: #EEEEEE;
+  --background-secondary: #EAEAEA;
+  --border: #999999;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --accent-color: #ffd60a;
+  --accent-color-light: #ffe066;
+  --text-primary: #f8f9fa;
+  --text-secondary: #dee2e6;
+  --background: #001d3d;
+  --background-secondary: #003566;
+  --border: #6c757d;
+  color-scheme: dark;
+}
+
 html {
   scrollbar-gutter: stable both-edges;
+}
+
+html[data-theme-effective="light"] {
+  color-scheme: light;
+}
+
+html[data-theme-effective="dark"] {
+  color-scheme: dark;
 }
 
 body {
@@ -224,6 +266,8 @@ nav.navigation {
 }
 
 nav.navigation a {
+  display: inline-flex;
+  align-items: center;
   padding: clamp(var(--space-xs), 1vw, var(--space-xl)) clamp(var(--space-xxxs), 1vw, var(--space-l));
   color: var(--accent-color-light);
   fill: var(--accent-color-light);
@@ -245,9 +289,40 @@ nav.navigation #rss {
   display: inline-block;
 }
 
+nav.navigation .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(var(--space-xs), 1vw, var(--space-xl)) clamp(var(--space-xxxs), 1vw, var(--space-l));
+  border: 0;
+  background: transparent;
+  color: var(--accent-color-light);
+  cursor: pointer;
+}
+
+nav.navigation .theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+nav.navigation .theme-toggle-icon {
+  display: none;
+}
+
+html[data-theme-effective="light"] .theme-toggle-icon-moon {
+  display: inline-flex;
+}
+
+html[data-theme-effective="dark"] .theme-toggle-icon-sun {
+  display: inline-flex;
+}
+
 nav.navigation a svg {
   margin-left: var(--space-n);
   width: calc(var(--text-size-l) * 0.7);
+}
+
+nav.navigation .theme-toggle svg {
+  display: block;
 }
 
 /* footer */
