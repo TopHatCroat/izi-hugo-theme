@@ -28,7 +28,7 @@
   --space-page-width: calc(var(--space-base) * 52);
   --space-page-vertical: calc(var(--space-base) * 4);
 
-  --space-content-vertical: calc(var(--space-base) * 2);
+  --space-content-vertical: calc(var(--space-base) * 1.5);
 
   --space-xxxs: calc(var(--space-base) * 0.1);
   --space-xxs: calc(var(--space-base) * 0.33);
@@ -162,7 +162,7 @@ h1,
 h2,
 h3 {
   font-weight: var(--font-weight-title);
-  margin-top: calc(var(--space-content-vertical) * 1.5);
+  margin-top: calc(var(--space-content-vertical) * 2.5);
   font-family: var(--title-font);
 }
 
