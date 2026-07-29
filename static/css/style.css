@@ -42,6 +42,10 @@
   --space-xxxl: calc(var(--space-base) * 6);
 }
 
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
 body {
   line-height: var(--text-size-xl);
   font-family: var(--text-font);
