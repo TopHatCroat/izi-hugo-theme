@@ -1,18 +1,129 @@
-/* :root {
-    --accent-color: #8f2d56;
-    --accent-color-light: #d81159;
-    --text-primary: #0a0908;
-    --text-secondary: #22333b;
-    --background: #ffffff;
-    --background-secondary: #efefef;
-    --border: #cecece;
+/*
+:root {
+  Color tokens
+  --accent-color: #aa2434;
+  --accent-color-light: #ff5959;
+  --text-primary: #252525;
+  --text-secondary: #888888;
+  --background: #eeeeee;
+  --background-secondary: #eaeaea;
+  --border: #999999;
 
-    --line-height-scalar: 2;
+  Font tokens
+  --title-font: Unna, serif;
+  --text-font: 'Open Sans', sans-serif;
 
-    --space-base: 1.2rem;
+  Type scale tokens
+  --text-size-s: 0.8rem;
+  --text-size-n: 1rem;
+  --text-size-l: 1.2rem;
+  --text-size-xl: 1.8rem;
+  --text-size-xxl: 2.5rem;
 
-    --space-page-width: calc(var(--space-base) * 58);
-    --space-page-vertical: calc(var(--space-base) * 2);
+  Line height tokens
+  --line-height-scalar: 1.4;
+  --heading-line-height-scalar: 1.2;
 
-    --space-content-vertical: calc(var(--space-base) * 1.2);
-} */
+  Font weight tokens
+  --font-weight-title: 600;
+  --font-weight-description: 300;
+  --font-weight-content: 400;
+
+  Spacing base token
+  --space-base: 1rem;
+
+  Layout spacing tokens
+  --space-page-width: calc(var(--space-base) * 52);
+  --space-page-vertical: calc(var(--space-base) * 4);
+  --space-content-vertical: calc(var(--space-base) * 2);
+
+  Spacing scale tokens
+  --space-xxxs: calc(var(--space-base) * 0.1);
+  --space-xxs: calc(var(--space-base) * 0.33);
+  --space-xs: calc(var(--space-base) * 0.5);
+  --space-s: calc(var(--space-base) * 0.8);
+  --space-n: var(--space-base);
+  --space-l: calc(var(--space-base) * 1.5);
+  --space-xl: calc(var(--space-base) * 3);
+  --space-xxxl: calc(var(--space-base) * 6);
+}
+*/
+
+/*
+Use this if you want your custom CSS to follow the browser theme by default.
+These values apply only when the user prefers dark mode and has not manually
+toggled the theme to light.
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ffd60a;
+    --accent-color-light: #ffe066;
+    --text-primary: #f8f9fa;
+    --text-secondary: #dee2e6;
+    --background: #001d3d;
+    --background-secondary: #003566;
+    --border: #6c757d;
+  }
+}
+*/
+
+/*
+Use these if you want different tokens when the built-in switcher forces a
+specific theme, regardless of browser preference.
+
+html[data-theme="light"] {
+  --accent-color: #aa2434;
+  --accent-color-light: #ff5959;
+  --text-primary: #252525;
+  --text-secondary: #888888;
+  --background: #eeeeee;
+  --background-secondary: #eaeaea;
+  --border: #999999;
+}
+
+html[data-theme="dark"] {
+  --accent-color: #ffd60a;
+  --accent-color-light: #ffe066;
+  --text-primary: #f8f9fa;
+  --text-secondary: #dee2e6;
+  --background: #001d3d;
+  --background-secondary: #003566;
+  --border: #6c757d;
+}
+*/
+
+/*
+Examples
+
+1. Make the site wider
+:root {
+  --space-page-width: 68rem;
+}
+
+2. Tighten body copy
+:root {
+  --line-height-scalar: 1.3;
+}
+
+3. Use a different heading font
+:root {
+  --title-font: 'Iowan Old Style', serif;
+}
+
+4. Make headings lighter or heavier
+:root {
+  --font-weight-title: 500;
+  --font-weight-description: 350;
+}
+
+5. Change only dark mode colors
+html[data-theme="dark"] {
+  --accent-color: #8ecae6;
+  --accent-color-light: #bde0fe;
+  --background: #111827;
+  --background-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #cbd5e1;
+  --border: #475569;
+}
+*/
