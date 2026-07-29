@@ -217,18 +217,53 @@ Alternatively, you can add a `description` in the Front Matter to provide bespok
 
 ### 3.5 Fonts
 
-You can replace default fonts for article titles and content
+Use `params.fonts` to load font stylesheets, then set the actual font families in your CSS variables.
 
 ```yaml
-  titleFont: 'https://fonts.googleapis.com/css?family=Unna'
-  textFont: 'https://fonts.googleapis.com/css?family=Open+Sans'
+params:
+  fonts:
+    useGoogleFonts: true
+    urls:
+      - https://fonts.googleapis.com/css?family=Unna
+      - https://fonts.googleapis.com/css?family=Open+Sans
 ```
 
-And also inside your `customCSS` file, for example `static/css/style.css`, add:
+How it works:
+
+- `fonts.urls` is an array of stylesheet URLs to load
+- `fonts.useGoogleFonts: true` adds these preconnect tags:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+```
+
+Then choose the actual font families in your custom CSS:
+
 ```css
 :root {
-    --title-font: Unna, serif;
-    --text-font: 'Open Sans', serif;
+  --title-font: Unna, serif;
+  --text-font: 'Open Sans', sans-serif;
+  --code-font: 'JetBrains Mono', monospace;
+}
+```
+
+If you self-host or download fonts, put your custom font family first in these CSS variables.
+
+For example:
+
+```yaml
+params:
+  fonts:
+    urls:
+      - /fonts/my-fonts.css
+```
+
+```css
+:root {
+  --title-font: 'My Title Font', Unna, serif;
+  --text-font: 'My Body Font', 'Open Sans', sans-serif;
+  --code-font: 'My Code Font', monospace;
 }
 ```
 

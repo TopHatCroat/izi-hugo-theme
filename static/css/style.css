@@ -7,8 +7,9 @@
   --background-secondary: #EAEAEA;
   --border: #999999;
 
-  --title-font: Unna, serif;
+  --title-font: 'Poltawski Nowy', serif;
   --text-font: 'Open Sans', sans-serif;
+  --code-font: 'Fira Code', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
   --text-size-s: 0.8rem;
   --text-size-n: 1rem;
@@ -241,7 +242,7 @@ h4:hover a {
 }
 
 p code {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-family: var(--code-font);
   font-size: inherit;
   background-color: var(--background-secondary);
   padding: 0 var(--space-xxxs);
@@ -253,7 +254,7 @@ p code {
 }
 
 pre code {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-family: var(--code-font);
 }
 
 /* navigation */

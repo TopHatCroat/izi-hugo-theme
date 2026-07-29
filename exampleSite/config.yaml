@@ -81,8 +81,10 @@ params:
   favicon: 'image/favicon.svg'
   avatar: 'image/avatar.png'
 
-  titleFont: 'https://fonts.googleapis.com/css?family=Unna'
-  textFont: 'https://fonts.googleapis.com/css?family=Open+Sans'
+  fonts:
+    useGoogleFonts: true
+    urls:
+      - https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap
 
   ###########################################
   # Optional Configuration

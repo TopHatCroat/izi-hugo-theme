@@ -2,6 +2,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 {{ $gaID := or .Site.Config.Services.GoogleAnalytics.ID .Site.GoogleAnalytics }}
+{{ $fonts := .Site.Params.fonts }}
+{{ $fontURLs := $fonts.urls | default (slice) }}
 <script>
   (function () {
     var root = document.documentElement;
@@ -29,12 +31,13 @@
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
 
-{{ if .Site.Params.titleFont }}
-  <link rel="stylesheet" href="{{ .Site.Params.titleFont }}">
+{{ if and $fonts.useGoogleFonts (gt (len $fontURLs) 0) }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {{ end }}
 
-{{ if .Site.Params.textFont }}
-  <link rel="stylesheet" href="{{ .Site.Params.textFont }}">
+{{ range $fontURLs }}
+  <link rel="stylesheet" href="{{ . }}">
 {{ end }}
 
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
