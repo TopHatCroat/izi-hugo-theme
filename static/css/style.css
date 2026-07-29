@@ -161,8 +161,43 @@ h4:hover a {
 }
 
 .highlight {
+  position: relative;
   max-width: 100%;
   overflow-x: auto;
+}
+
+.code-copy-button {
+  position: absolute;
+  top: var(--space-n);
+  right: var(--space-xxxs);
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xxs) var(--space-xs);
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.highlight:hover .code-copy-button,
+.code-copy-button:focus,
+.code-copy-button:focus-visible {
+  opacity: 1;
+}
+
+.code-copy-button:hover {
+  color: var(--accent-color);
+}
+
+.code-copy-button svg {
+  display: block;
+}
+
+.code-copy-button .label {
+  font-size: var(--text-size-s);
+  line-height: 1;
 }
 
 p code {
