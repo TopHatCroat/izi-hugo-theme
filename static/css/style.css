@@ -18,7 +18,8 @@
   --text-size-xl: 1.8rem;
   --text-size-xxl: 2.5rem;
 
-  --line-height-scalar: 2;
+  --line-height-scalar: 1.4;
+  --heading-line-height-scalar: 1.2;
 
   --space-base: 1rem;
 
@@ -83,7 +84,7 @@ thead th, th {
   text-align: left;
   padding: var(--space-s) var(--space-n);
   font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-l) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
   font-weight: 800;
   color: var(--text-secondary);
   cursor: default;
@@ -121,7 +122,7 @@ p {
   margin: calc(var(--space-content-vertical) * 0.8) 0;
 
   font-size: var(--text-size-n);
-  line-height: calc(var(--text-size-n) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
 }
 
 p,
@@ -211,7 +212,7 @@ nav.navigation a svg {
   margin: calc(var(--space-page-vertical) * 2) 0 var(--space-page-vertical) 0;
   text-align: center;
   font-size: var(--text-size-s);
-  line-height: calc(var(--text-size-s) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
 }
 
 #footer .copyright {
@@ -300,7 +301,7 @@ nav.navigation a svg {
   margin-right: var(--space-xxs);
   color: var(--text-secondary);
   font-size: var(--text-size-s);
-  line-height: calc(var(--text-size-s) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
 }
 
 .tags a:hover {
@@ -319,7 +320,7 @@ nav.navigation a svg {
 
 #article-list .title {
   font-size: var(--text-size-xl);
-  line-height: calc(var(--text-size-xl) * var(--line-height-scalar));
+  line-height: var(--heading-line-height-scalar);
   font-weight: 400;
   margin: 0;
 }
@@ -372,24 +373,23 @@ nav.navigation a svg {
 
 #article .title {
   font-size: var(--text-size-xxl);
-  line-height: calc(var(--text-size-xxl) * var(--line-height-scalar));
+  line-height: var(--heading-line-height-scalar);
   font-weight: 800;
-  margin: 0;
+  margin: var(--space-page-vertical) 0 var(--space-page-vertical) 0;
 }
 
 #article .description {
   font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-xl) * var(--line-height-scalar));
+  line-height: var(--heading-line-height-scalar);
   font-weight: 300;
   color: var(--text-secondary);
-
-  margin: 0;
+  margin: 0 0 calc(var(--space-page-vertical) * 0.5) 0;
 }
 
 #article .meta {
   color: var(--text-secondary);
   font-size: var(--text-size-n);
-  line-height: calc(var(--text-size-n) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
 }
 
 #article .meta .separator {
@@ -397,7 +397,7 @@ nav.navigation a svg {
 }
 
 #article .content {
-  margin-top: calc(var(--space-page-vertical) * 3);
+  margin-top: var(--space-page-vertical);
 }
 
 /* article page */
@@ -412,14 +412,14 @@ nav.navigation a svg {
 
 #archive .group .key {
   font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-l) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
   margin-bottom: calc(var(--space-page-vertical) * 0.1);
 }
 
 #archive .group .value {
   display: block;
   font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-l) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
   margin-bottom: calc(var(--space-page-vertical) * 0.1);
 }
 
@@ -479,7 +479,7 @@ nav.navigation a svg {
   display: inline-block;
   color: var(--text-secondary);
   font-size: var(--text-size-xl);
-  line-height: calc(var(--text-size-xl) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
   font-weight: 400;
   margin: 0;
 }
@@ -495,7 +495,7 @@ nav.navigation a svg {
 #page-404 .read-more {
   font-weight: 300;
   font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-l) * var(--line-height-scalar));
+  line-height: var(--line-height-scalar);
   color: var(--text-secondary);
   margin-top: calc(var(--space-page-vertical) * 1.5);
   margin-bottom: calc(var(--space-page-vertical) * 0.5);
@@ -597,4 +597,3 @@ nav.navigation a svg {
 /* GenericTraceback */ .chroma .gt { color: #aa0000 }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #bbbbbb }
-

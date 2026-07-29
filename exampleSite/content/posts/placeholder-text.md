@@ -1,8 +1,8 @@
 +++
 author = "Hugo Authors"
-title = "Placeholder Text"
+title = "An unusually long blog post title for those very meticulous writing about people, the world and the universe"
 date = "2019-03-09"
-description = "Lorem Ipsum Dolor Si Amet"
+description = "Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et."
 tags = [
     "markdown",
     "text",
