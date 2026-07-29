@@ -20,6 +20,9 @@
 
   --line-height-scalar: 1.4;
   --heading-line-height-scalar: 1.2;
+  --font-weight-title: 400;
+  --font-weight-description: 300;
+  --font-weight-content: 400;
 
   --space-base: 1rem;
 
@@ -113,7 +116,7 @@ tr:nth-child(odd)>td {
 h1,
 h2,
 h3 {
-  font-weight: 400;
+  font-weight: var(--font-weight-title);
   margin-top: calc(var(--space-content-vertical) * 1.5);
   font-family: var(--title-font);
 }
@@ -123,6 +126,7 @@ p {
 
   font-size: var(--text-size-n);
   line-height: var(--line-height-scalar);
+  font-weight: var(--font-weight-content);
 }
 
 p,
@@ -232,6 +236,10 @@ nav.navigation a svg {
   margin: 0 var(--space-xxs);
 }
 
+#social a img {
+  vertical-align: middle;
+}
+
 #social a svg:hover {
   fill: var(--accent-color);
 }
@@ -272,6 +280,7 @@ nav.navigation a svg {
   margin-bottom: calc(var(--space-content-vertical) * 0.3);
   font-size: clamp(var(--text-size-xl), 8vw, var(--text-size-xxl));
   line-height: clamp(var(--text-size-xl), 8vw, var(--text-size-xxl));
+  margin: var(--space-page-vertical) 0 var(--space-page-vertical) 0;
   color: var(--text-primary);
   white-space: nowrap;
 }
@@ -280,7 +289,7 @@ nav.navigation a svg {
   margin-top: 0;
   font-size: clamp(var(--text-size-n), 4vw, var(--text-size-l));
   line-height: clamp(var(--text-size-l), 6vw, var(--text-size-xl));
-  font-weight: 300;
+  font-weight: var(--font-weight-description);
   color: var(--text-secondary);
 }
 
@@ -321,7 +330,7 @@ nav.navigation a svg {
 #article-list .title {
   font-size: var(--text-size-xl);
   line-height: var(--heading-line-height-scalar);
-  font-weight: 400;
+  font-weight: var(--font-weight-title);
   margin: 0;
 }
 
@@ -374,14 +383,14 @@ nav.navigation a svg {
 #article .title {
   font-size: var(--text-size-xxl);
   line-height: var(--heading-line-height-scalar);
-  font-weight: 800;
+  font-weight: var(--font-weight-title);
   margin: var(--space-page-vertical) 0 var(--space-page-vertical) 0;
 }
 
 #article .description {
   font-size: var(--text-size-l);
   line-height: var(--heading-line-height-scalar);
-  font-weight: 300;
+  font-weight: var(--font-weight-description);
   color: var(--text-secondary);
   margin: 0 0 calc(var(--space-page-vertical) * 0.5) 0;
 }
@@ -480,7 +489,7 @@ nav.navigation a svg {
   color: var(--text-secondary);
   font-size: var(--text-size-xl);
   line-height: var(--line-height-scalar);
-  font-weight: 400;
+  font-weight: var(--font-weight-title);
   margin: 0;
 }
 
@@ -493,7 +502,7 @@ nav.navigation a svg {
 }
 
 #page-404 .read-more {
-  font-weight: 300;
+  font-weight: var(--font-weight-description);
   font-size: var(--text-size-l);
   line-height: var(--line-height-scalar);
   color: var(--text-secondary);

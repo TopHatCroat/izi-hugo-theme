@@ -45,16 +45,33 @@ params:
   description: My Blog
 
   # Social links in footer, if you don't have it just delete it or comment it out
-  # Simply delete the ones you don't have
+  # Use the list form below to preserve display order.
   # Source: https://github.com/simple-icons/simple-icons
   social:
-    github: your-github-link
-    twitter: your-twitter-link
-    stackoverflow: your-stackoverflow-link
-    email: your-email
-    facebook: your-facebook-link
-    mastodon: your-mastodon-link
-    linkedin: your-linkedin-link
+    - name: github
+      url: your-github-link
+    - name: twitter
+      url: your-twitter-link
+    - name: stackoverflow
+      url: your-stackoverflow-link
+    - name: email
+      url: your-email
+    - name: facebook
+      url: your-facebook-link
+    - name: mastodon
+      url: your-mastodon-link
+    - name: linkedin
+      url: your-linkedin-link
+    # Example for custom social icon:
+    # 1. preferred: create `layouts/partials/svgs/<key>.svg` to get the same fill/size behavior as built-in icons
+    # 2. fallback: add `static/image/social/<key>.svg|png|jpg|jpeg|webp`
+    - name: bluesky
+      url: your-bluesky-link
+
+  # Optional fallback location for custom social icons in your site's static directory.
+  # If there is no matching SVG partial in layouts/partials/svgs/, the theme will try:
+  # static/image/social/<key>.svg|png|jpg|jpeg|webp
+  socialIconsPath: image/social
 
   # URL for the source code of the blog, it must point to the main/master branch such that when it's appended with
   # /content/<path-of-article> it should end up at he article source

@@ -159,6 +159,49 @@ customJS:
   - https://example.com/custom.js # remote js
 ```
 
+### 3.3.1 Custom Social Icons
+
+Built-in social icons are rendered from SVG partials.
+
+If you want full control over `fill`, `width`, `height`, and the same styling behavior as built-in icons, create a site-level partial override:
+
+```text
+layouts/partials/svgs/bluesky.svg
+```
+
+This overrides the theme icon automatically.
+
+If you only want to provide an image fallback, you can place a custom icon in your site's `static/` directory.
+
+For example:
+
+```yaml
+params:
+  social:
+    - name: bluesky
+      url: https://bsky.app/profile/example.com
+  socialIconsPath: image/social
+```
+
+Then add one of these files:
+
+```text
+static/image/social/bluesky.svg
+static/image/social/bluesky.png
+static/image/social/bluesky.jpg
+static/image/social/bluesky.jpeg
+static/image/social/bluesky.webp
+```
+
+Use the list form for `params.social` so icons render in the same order as your configuration.
+
+Resolution order is:
+
+1. `layouts/partials/svgs/<key>.svg` from your site
+2. custom image from `static/<socialIconsPath>/<key>.*`
+3. built-in theme SVG partial
+4. text label fallback
+
 ### 3.4 Post Summary in Home Page
 
 Set `hiddenPostSummaryInHomePage` to `true` to show the first paragraph on the index page, default is `false`.

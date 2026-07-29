@@ -1,11 +1,34 @@
 <div id="social">
 
 {{ $social := .Site.Params.social }}
-{{ range $key, $val := $social }}
+{{ $socialIconsPath := strings.TrimPrefix "/" (.Site.Params.socialIconsPath | default "image/social") }}
+{{ range $social }}
+    {{ if reflect.IsMap . }}
+    {{ $key := index . "name" }}
+    {{ $val := index . "url" }}
+    {{ if and $key $val }}
+    {{ $svg := print "svgs/" $key ".svg" }}
+    {{ $customIcon := "" }}
+    {{ $customIconBase := printf "%s/%s" $socialIconsPath $key }}
+    {{ range slice "svg" "png" "jpg" "jpeg" "webp" }}
+      {{ $candidate := printf "%s.%s" $customIconBase . }}
+      {{ if and (eq $customIcon "") (os.FileExists (printf "static/%s" $candidate)) }}
+        {{ $customIcon = $candidate }}
+      {{ end }}
+    {{ end }}
     <a class="symbol" href="{{ $val }}" rel="me" target="_blank">
-        {{ $svg :=  print "svgs/" $key ".svg" }}
-        {{ partial $svg (dict "fill" "#bbbbbb" "width" 28 "height" 28 ) }}
+        {{ if and (templates.Exists (printf "_partials/%s" $svg)) (os.FileExists (printf "layouts/partials/%s" $svg)) }}
+          {{ partial $svg (dict "fill" "#bbbbbb" "width" 28 "height" 28 ) }}
+        {{ else if $customIcon }}
+          <img src="{{ $customIcon | relURL }}" alt="{{ $key }}" width="28" height="28" />
+        {{ else if templates.Exists (printf "_partials/%s" $svg) }}
+          {{ partial $svg (dict "fill" "#bbbbbb" "width" 28 "height" 28 ) }}
+        {{ else }}
+          <span>{{ $key }}</span>
+        {{ end }}
     </a>
+    {{ end }}
+    {{ end }}
 {{ end }}
 
 </div>
