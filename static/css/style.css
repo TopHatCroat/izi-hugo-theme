@@ -180,6 +180,10 @@ pre {
   overflow-wrap: anywhere;
 }
 
+.markdown-image {
+  text-align: center;
+}
+
 .markdown-image img {
   max-width: 100%;
 }
@@ -497,7 +501,6 @@ nav.navigation .theme-toggle svg {
   font-size: var(--text-size-xxl);
   line-height: var(--heading-line-height-scalar);
   font-weight: var(--font-weight-title);
-  margin: var(--space-page-vertical) 0 var(--space-page-vertical) 0;
 }
 
 #article .description {
