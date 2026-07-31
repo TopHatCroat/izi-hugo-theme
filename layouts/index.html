@@ -4,19 +4,21 @@
 <div id="article-list">
   {{ $pages := .Site.RegularPages }}
   {{ $paginator := .Paginate ($pages) }}
-  {{ range $paginator.Pages }}
-  {{ $title := .Title }}
-  {{ $summary := .Summary }}
+  {{ range $index, $page := $paginator.Pages }}
+  {{ $title := $page.Title }}
+  {{ $summary := $page.Summary }}
   <section class="item">
+    {{ if gt $index 0 }}
     <hr>
-    <a href='{{ .RelPermalink }}'>
+    {{ end }}
+    <a href='{{ $page.RelPermalink }}'>
       <h1 class="title">{{ $title }}</h1>
 
-      {{ if ne .Site.Params.hiddenPostSummaryInHomePage true }}
+      {{ if ne $page.Site.Params.hiddenPostSummaryInHomePage true }}
       <div class="summary">{{ $summary | plainify | htmlUnescape }}</div>
       {{ else }}
-      {{ if ne .Description "" }}
-      <div class="summary">{{ .Description }}</div>
+      {{ if ne $page.Description "" }}
+      <div class="summary">{{ $page.Description }}</div>
       {{ end }}
       {{ end }}
     </a>
